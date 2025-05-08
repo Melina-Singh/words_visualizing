@@ -1,0 +1,441 @@
+2025-05-08 19:55:56,301 - embeddings - INFO - Initialized GloVeEmbeddings with vocab size 6
+2025-05-08 19:55:56,303 - embeddings - INFO - Loading GloVe embeddings
+2025-05-08 19:55:59,102 - embeddings - ERROR - Failed to load GloVe embeddings: File is not a zip file
+2025-05-08 20:07:09,001 - api - INFO - Initializing API with sample corpus
+2025-05-08 20:07:09,001 - preprocess - INFO - Starting corpus preprocessing
+2025-05-08 20:07:09,037 - preprocess - INFO - Created vocabulary with 17 words
+2025-05-08 20:07:09,037 - embeddings - INFO - Initialized GloVeEmbeddings with vocab size 17
+2025-05-08 20:07:09,038 - embeddings - INFO - Loading GloVe embeddings
+2025-05-08 20:07:09,038 - embeddings - INFO - Attempting to download GloVe from https://github.com/stanfordnlp/GloVe/raw/master/glove.6B.zip
+2025-05-08 20:07:09,970 - embeddings - ERROR - Failed to download or process GloVe embeddings from https://github.com/stanfordnlp/GloVe/raw/master/glove.6B.zip: 404 Client Error: Not Found for url: https://github.com/stanfordnlp/GloVe/raw/master/glove.6B.zip
+2025-05-08 20:07:09,971 - embeddings - INFO - Please download 'glove.6B.50d.txt' manually and provide its local path
+2025-05-08 20:16:02,233 - api - INFO - Initializing API with sample corpus
+2025-05-08 20:16:02,233 - preprocess - INFO - Starting corpus preprocessing
+2025-05-08 20:16:02,242 - preprocess - INFO - Created vocabulary with 17 words
+2025-05-08 20:16:02,242 - embeddings - INFO - Initialized GloVeEmbeddings with vocab size 17
+2025-05-08 20:16:02,243 - embeddings - INFO - Loading GloVe embeddings
+2025-05-08 20:16:02,243 - embeddings - INFO - Loading GloVe from local file: data/glove.6B.50d.txt
+2025-05-08 20:16:03,477 - embeddings - INFO - Loaded embeddings for 17 words from local file
+2025-05-08 20:16:03,477 - embeddings - INFO - Building embedding matrix
+2025-05-08 20:16:03,478 - embeddings - INFO - Embedding matrix built
+2025-05-08 20:16:03,478 - visualize - INFO - Generating 3D visualization data
+2025-05-08 20:16:03,478 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 20:16:03,487 - embeddings - INFO - 3D dimensionality reduction complete
+2025-05-08 20:16:03,488 - visualize - INFO - 3D visualization data saved as JSON
+2025-05-08 20:16:03,490 - api - INFO - Starting Flask server
+2025-05-08 20:16:05,454 - api - INFO - Initializing API with sample corpus
+2025-05-08 20:16:05,454 - preprocess - INFO - Starting corpus preprocessing
+2025-05-08 20:16:05,461 - preprocess - INFO - Created vocabulary with 17 words
+2025-05-08 20:16:05,462 - embeddings - INFO - Initialized GloVeEmbeddings with vocab size 17
+2025-05-08 20:16:05,462 - embeddings - INFO - Loading GloVe embeddings
+2025-05-08 20:16:05,463 - embeddings - INFO - Loading GloVe from local file: data/glove.6B.50d.txt
+2025-05-08 20:16:06,565 - embeddings - INFO - Loaded embeddings for 17 words from local file
+2025-05-08 20:16:06,566 - embeddings - INFO - Building embedding matrix
+2025-05-08 20:16:06,566 - embeddings - INFO - Embedding matrix built
+2025-05-08 20:16:06,567 - visualize - INFO - Generating 3D visualization data
+2025-05-08 20:16:06,567 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 20:16:06,568 - embeddings - INFO - 3D dimensionality reduction complete
+2025-05-08 20:16:06,570 - visualize - INFO - 3D visualization data saved as JSON
+2025-05-08 20:16:06,571 - api - INFO - Starting Flask server
+2025-05-08 20:16:28,343 - api - INFO - Serving frontend
+2025-05-08 20:16:56,134 - api - INFO - Serving frontend
+2025-05-08 20:29:22,823 - api - INFO - Initializing API with sample corpus
+2025-05-08 20:29:22,823 - preprocess - INFO - Starting corpus preprocessing
+2025-05-08 20:29:22,833 - preprocess - INFO - Created vocabulary with 17 words
+2025-05-08 20:29:22,834 - embeddings - INFO - Initialized GloVeEmbeddings with vocab size 17
+2025-05-08 20:29:22,834 - embeddings - INFO - Loading GloVe embeddings
+2025-05-08 20:29:22,834 - embeddings - INFO - Loading GloVe from local file: data/glove.6B.50d.txt
+2025-05-08 20:29:24,003 - embeddings - INFO - Loaded embeddings for 17 words from local file
+2025-05-08 20:29:24,003 - embeddings - INFO - Building embedding matrix
+2025-05-08 20:29:24,003 - embeddings - INFO - Embedding matrix built
+2025-05-08 20:29:24,004 - visualize - INFO - Generating 3D visualization data
+2025-05-08 20:29:24,004 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 20:29:24,012 - embeddings - INFO - 3D dimensionality reduction complete
+2025-05-08 20:29:24,015 - visualize - INFO - 3D visualization data saved as JSON
+2025-05-08 20:29:24,016 - api - INFO - Starting Flask server
+2025-05-08 20:29:26,563 - api - INFO - Initializing API with sample corpus
+2025-05-08 20:29:26,563 - preprocess - INFO - Starting corpus preprocessing
+2025-05-08 20:29:26,572 - preprocess - INFO - Created vocabulary with 17 words
+2025-05-08 20:29:26,572 - embeddings - INFO - Initialized GloVeEmbeddings with vocab size 17
+2025-05-08 20:29:26,572 - embeddings - INFO - Loading GloVe embeddings
+2025-05-08 20:29:26,572 - embeddings - INFO - Loading GloVe from local file: data/glove.6B.50d.txt
+2025-05-08 20:29:27,813 - embeddings - INFO - Loaded embeddings for 17 words from local file
+2025-05-08 20:29:27,813 - embeddings - INFO - Building embedding matrix
+2025-05-08 20:29:27,814 - embeddings - INFO - Embedding matrix built
+2025-05-08 20:29:27,814 - visualize - INFO - Generating 3D visualization data
+2025-05-08 20:29:27,814 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 20:29:27,815 - embeddings - INFO - 3D dimensionality reduction complete
+2025-05-08 20:29:27,816 - visualize - INFO - 3D visualization data saved as JSON
+2025-05-08 20:29:27,818 - api - INFO - Starting Flask server
+2025-05-08 20:29:36,466 - api - INFO - Serving frontend
+2025-05-08 20:29:44,446 - api - INFO - Received embeddings request
+2025-05-08 20:29:44,447 - api - WARNING - Word 'hello' not in vocabulary
+2025-05-08 20:29:52,992 - api - INFO - Received embeddings request
+2025-05-08 20:29:52,993 - api - WARNING - Word 'words' not in vocabulary
+2025-05-08 20:29:59,914 - api - INFO - Received embeddings request
+2025-05-08 20:29:59,915 - api - WARNING - Word 'how to' not in vocabulary
+2025-05-08 20:31:04,566 - api - INFO - Received embeddings request
+2025-05-08 20:31:04,567 - api - WARNING - Word 'where' not in vocabulary
+2025-05-08 20:32:21,241 - api - INFO - Initializing API with sample corpus
+2025-05-08 20:32:21,242 - preprocess - INFO - Starting corpus preprocessing
+2025-05-08 20:32:21,253 - preprocess - INFO - Created vocabulary with 17 words
+2025-05-08 20:32:21,254 - embeddings - INFO - Initialized GloVeEmbeddings with vocab size 17
+2025-05-08 20:32:21,254 - embeddings - INFO - Loading GloVe embeddings
+2025-05-08 20:32:21,255 - embeddings - INFO - Loading GloVe from local file: data/glove.6B.50d.txt
+2025-05-08 20:32:22,652 - embeddings - INFO - Loaded embeddings for 17 words from local file
+2025-05-08 20:32:22,652 - embeddings - INFO - Building embedding matrix
+2025-05-08 20:32:22,652 - embeddings - INFO - Embedding matrix built
+2025-05-08 20:32:22,653 - visualize - INFO - Generating 3D visualization data
+2025-05-08 20:32:22,653 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 20:32:22,655 - embeddings - INFO - 3D dimensionality reduction complete
+2025-05-08 20:32:22,656 - visualize - INFO - 3D visualization data saved as JSON
+2025-05-08 20:32:22,657 - api - INFO - Starting Flask server
+2025-05-08 20:34:13,123 - api - INFO - Initializing API with sample corpus
+2025-05-08 20:34:13,124 - preprocess - INFO - Starting corpus preprocessing
+2025-05-08 20:34:13,132 - preprocess - INFO - Created vocabulary with 50 words
+2025-05-08 20:34:13,132 - embeddings - INFO - Initialized GloVeEmbeddings with vocab size 50
+2025-05-08 20:34:13,133 - embeddings - INFO - Loading GloVe embeddings
+2025-05-08 20:34:13,134 - embeddings - INFO - Loading GloVe from local file: data/glove.6B.50d.txt
+2025-05-08 20:34:14,757 - embeddings - INFO - Loaded embeddings for 50 words from local file
+2025-05-08 20:34:14,757 - embeddings - INFO - Building embedding matrix
+2025-05-08 20:34:14,758 - embeddings - INFO - Embedding matrix built
+2025-05-08 20:34:14,758 - visualize - INFO - Generating 3D visualization data
+2025-05-08 20:34:14,758 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 20:34:14,768 - embeddings - INFO - 3D dimensionality reduction complete
+2025-05-08 20:34:14,770 - visualize - INFO - 3D visualization data saved as JSON
+2025-05-08 20:34:14,773 - api - INFO - Starting Flask server
+2025-05-08 20:34:17,175 - api - INFO - Initializing API with sample corpus
+2025-05-08 20:34:17,175 - preprocess - INFO - Starting corpus preprocessing
+2025-05-08 20:34:17,181 - preprocess - INFO - Created vocabulary with 50 words
+2025-05-08 20:34:17,181 - embeddings - INFO - Initialized GloVeEmbeddings with vocab size 50
+2025-05-08 20:34:17,182 - embeddings - INFO - Loading GloVe embeddings
+2025-05-08 20:34:17,182 - embeddings - INFO - Loading GloVe from local file: data/glove.6B.50d.txt
+2025-05-08 20:34:18,547 - embeddings - INFO - Loaded embeddings for 50 words from local file
+2025-05-08 20:34:18,548 - embeddings - INFO - Building embedding matrix
+2025-05-08 20:34:18,548 - embeddings - INFO - Embedding matrix built
+2025-05-08 20:34:18,548 - visualize - INFO - Generating 3D visualization data
+2025-05-08 20:34:18,549 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 20:34:18,553 - embeddings - INFO - 3D dimensionality reduction complete
+2025-05-08 20:34:18,554 - visualize - INFO - 3D visualization data saved as JSON
+2025-05-08 20:34:18,555 - api - INFO - Starting Flask server
+2025-05-08 20:34:24,480 - api - INFO - Serving frontend
+2025-05-08 20:34:31,305 - api - INFO - Received embeddings request
+2025-05-08 20:34:31,306 - embeddings - INFO - Found 5 nearest neighbors for 'brown'
+2025-05-08 20:34:31,306 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 20:34:31,313 - embeddings - INFO - 3D dimensionality reduction complete
+2025-05-08 20:34:31,314 - api - INFO - Returning embeddings, neighbors, and 3D coords for 'brown'
+2025-05-08 20:34:31,315 - api - ERROR - Error processing embeddings request: Object of type float32 is not JSON serializable
+2025-05-08 20:34:35,798 - api - INFO - Received embeddings request
+2025-05-08 20:34:35,799 - embeddings - INFO - Found 5 nearest neighbors for 'brown'
+2025-05-08 20:34:35,799 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 20:34:35,802 - embeddings - INFO - 3D dimensionality reduction complete
+2025-05-08 20:34:35,802 - api - INFO - Returning embeddings, neighbors, and 3D coords for 'brown'
+2025-05-08 20:34:35,803 - api - ERROR - Error processing embeddings request: Object of type float32 is not JSON serializable
+2025-05-08 20:35:03,927 - api - INFO - Received embeddings request
+2025-05-08 20:35:03,928 - embeddings - INFO - Found 5 nearest neighbors for 'neural'
+2025-05-08 20:35:03,928 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 20:35:03,931 - embeddings - INFO - 3D dimensionality reduction complete
+2025-05-08 20:35:03,932 - api - INFO - Returning embeddings, neighbors, and 3D coords for 'neural'
+2025-05-08 20:35:03,932 - api - ERROR - Error processing embeddings request: Object of type float32 is not JSON serializable
+2025-05-08 20:41:51,654 - embeddings - INFO - Initialized TF-IDF embeddings with vocab size 6
+2025-05-08 20:41:51,657 - embeddings - INFO - Computing TF-IDF vectors
+2025-05-08 20:41:51,661 - embeddings - INFO - Computed TF-IDF vectors for 3 documents
+2025-05-08 20:41:51,664 - embeddings - INFO - Found 5 nearest neighbors for 'machine'
+2025-05-08 20:42:19,354 - preprocess - INFO - Starting corpus preprocessing
+2025-05-08 20:42:19,363 - preprocess - INFO - Created vocabulary with 21 words
+2025-05-08 20:42:19,363 - preprocess - INFO - Preprocessing complete
+2025-05-08 20:45:15,486 - api - INFO - Initializing API with sample corpus
+2025-05-08 20:45:15,486 - preprocess - INFO - Starting corpus preprocessing
+2025-05-08 20:45:15,493 - preprocess - INFO - Created vocabulary with 57 words
+2025-05-08 20:45:15,494 - embeddings - INFO - Initialized TF-IDF embeddings with vocab size 57
+2025-05-08 20:45:15,494 - embeddings - INFO - Computing TF-IDF vectors
+2025-05-08 20:45:15,497 - embeddings - INFO - Computed TF-IDF vectors for 10 documents
+2025-05-08 20:45:15,497 - visualize - INFO - Generating 3D visualization data
+2025-05-08 20:45:15,497 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 20:45:15,502 - embeddings - INFO - 3D dimensionality reduction complete
+2025-05-08 20:45:15,503 - visualize - INFO - 3D visualization data saved as JSON
+2025-05-08 20:45:15,505 - api - INFO - Starting Flask server
+2025-05-08 20:45:17,599 - api - INFO - Initializing API with sample corpus
+2025-05-08 20:45:17,600 - preprocess - INFO - Starting corpus preprocessing
+2025-05-08 20:45:17,607 - preprocess - INFO - Created vocabulary with 57 words
+2025-05-08 20:45:17,607 - embeddings - INFO - Initialized TF-IDF embeddings with vocab size 57
+2025-05-08 20:45:17,608 - embeddings - INFO - Computing TF-IDF vectors
+2025-05-08 20:45:17,610 - embeddings - INFO - Computed TF-IDF vectors for 10 documents
+2025-05-08 20:45:17,610 - visualize - INFO - Generating 3D visualization data
+2025-05-08 20:45:17,610 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 20:45:17,611 - embeddings - INFO - 3D dimensionality reduction complete
+2025-05-08 20:45:17,613 - visualize - INFO - 3D visualization data saved as JSON
+2025-05-08 20:45:17,614 - api - INFO - Starting Flask server
+2025-05-08 20:45:22,828 - api - INFO - Serving frontend
+2025-05-08 20:45:30,195 - api - INFO - Received embeddings request
+2025-05-08 20:45:30,196 - api - WARNING - Word 'BROWN' not in vocabulary
+2025-05-08 20:45:43,755 - api - INFO - Received embeddings request
+2025-05-08 20:45:43,756 - api - WARNING - Word 'NEURAL' not in vocabulary
+2025-05-08 20:45:53,492 - api - INFO - Received embeddings request
+2025-05-08 20:45:53,521 - embeddings - INFO - Found 5 nearest neighbors for 'is'
+2025-05-08 20:45:53,521 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 20:45:53,523 - embeddings - INFO - 3D dimensionality reduction complete
+2025-05-08 20:45:53,523 - api - INFO - Returning embeddings, neighbors, and 3D coords for 'is'
+2025-05-08 20:46:48,361 - api - INFO - Received embeddings request
+2025-05-08 20:46:48,385 - embeddings - INFO - Found 5 nearest neighbors for 'brown'
+2025-05-08 20:46:48,386 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 20:46:48,387 - embeddings - INFO - 3D dimensionality reduction complete
+2025-05-08 20:46:48,388 - api - ERROR - Error processing embeddings request: index 10 is out of bounds for axis 0 with size 10
+2025-05-08 20:46:52,879 - api - INFO - Received embeddings request
+2025-05-08 20:46:52,899 - embeddings - INFO - Found 5 nearest neighbors for 'brown'
+2025-05-08 20:46:52,899 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 20:46:52,901 - embeddings - INFO - 3D dimensionality reduction complete
+2025-05-08 20:46:52,901 - api - ERROR - Error processing embeddings request: index 10 is out of bounds for axis 0 with size 10
+2025-05-08 20:46:54,301 - api - INFO - Received embeddings request
+2025-05-08 20:46:54,320 - embeddings - INFO - Found 5 nearest neighbors for 'brown'
+2025-05-08 20:46:54,320 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 20:46:54,321 - embeddings - INFO - 3D dimensionality reduction complete
+2025-05-08 20:46:54,322 - api - ERROR - Error processing embeddings request: index 10 is out of bounds for axis 0 with size 10
+2025-05-08 20:46:55,561 - api - INFO - Received embeddings request
+2025-05-08 20:46:55,578 - embeddings - INFO - Found 5 nearest neighbors for 'brown'
+2025-05-08 20:46:55,578 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 20:46:55,579 - embeddings - INFO - 3D dimensionality reduction complete
+2025-05-08 20:46:55,579 - api - ERROR - Error processing embeddings request: index 10 is out of bounds for axis 0 with size 10
+2025-05-08 20:47:03,889 - api - INFO - Received embeddings request
+2025-05-08 20:47:03,908 - embeddings - INFO - Found 5 nearest neighbors for 'learning'
+2025-05-08 20:47:03,908 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 20:47:03,909 - embeddings - INFO - 3D dimensionality reduction complete
+2025-05-08 20:47:03,910 - api - INFO - Returning embeddings, neighbors, and 3D coords for 'learning'
+2025-05-08 21:05:55,728 - api - INFO - Initializing API with sample corpus
+2025-05-08 21:05:55,729 - preprocess - INFO - Starting corpus preprocessing
+2025-05-08 21:05:55,736 - preprocess - INFO - Created vocabulary with 57 words
+2025-05-08 21:05:55,737 - embeddings - INFO - Initialized TF-IDF embeddings with vocab size 57
+2025-05-08 21:05:55,737 - embeddings - INFO - Computing TF-IDF vectors
+2025-05-08 21:05:55,741 - embeddings - INFO - Computed TF-IDF vectors for 10 documents
+2025-05-08 21:05:55,741 - visualize - INFO - Generating visualization data for PCA
+2025-05-08 21:05:55,741 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:05:55,748 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:05:55,748 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:05:55,749 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:05:55,753 - visualize - INFO - Visualization data saved as JSON for PCA
+2025-05-08 21:05:55,753 - visualize - INFO - Generating visualization data for TSNE
+2025-05-08 21:05:55,753 - embeddings - INFO - Reducing dimensions to 3D with TSNE
+2025-05-08 21:05:56,047 - embeddings - INFO - 3D dimensionality reduction complete with TSNE
+2025-05-08 21:05:56,047 - embeddings - INFO - Reducing dimensions to 3D with TSNE
+2025-05-08 21:05:56,188 - embeddings - INFO - 3D dimensionality reduction complete with TSNE
+2025-05-08 21:05:56,192 - visualize - INFO - Visualization data saved as JSON for TSNE
+2025-05-08 21:05:56,193 - api - INFO - Starting Flask server
+2025-05-08 21:05:58,236 - api - INFO - Initializing API with sample corpus
+2025-05-08 21:05:58,236 - preprocess - INFO - Starting corpus preprocessing
+2025-05-08 21:05:58,242 - preprocess - INFO - Created vocabulary with 57 words
+2025-05-08 21:05:58,243 - embeddings - INFO - Initialized TF-IDF embeddings with vocab size 57
+2025-05-08 21:05:58,243 - embeddings - INFO - Computing TF-IDF vectors
+2025-05-08 21:05:58,244 - embeddings - INFO - Computed TF-IDF vectors for 10 documents
+2025-05-08 21:05:58,244 - visualize - INFO - Generating visualization data for PCA
+2025-05-08 21:05:58,245 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:05:58,245 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:05:58,246 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:05:58,246 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:05:58,249 - visualize - INFO - Visualization data saved as JSON for PCA
+2025-05-08 21:05:58,249 - visualize - INFO - Generating visualization data for TSNE
+2025-05-08 21:05:58,249 - embeddings - INFO - Reducing dimensions to 3D with TSNE
+2025-05-08 21:05:58,452 - embeddings - INFO - 3D dimensionality reduction complete with TSNE
+2025-05-08 21:05:58,453 - embeddings - INFO - Reducing dimensions to 3D with TSNE
+2025-05-08 21:05:58,597 - embeddings - INFO - 3D dimensionality reduction complete with TSNE
+2025-05-08 21:05:58,601 - visualize - INFO - Visualization data saved as JSON for TSNE
+2025-05-08 21:05:58,603 - api - INFO - Starting Flask server
+2025-05-08 21:06:12,252 - api - INFO - Serving frontend
+2025-05-08 21:06:30,837 - api - INFO - Received embeddings request
+2025-05-08 21:06:30,857 - embeddings - INFO - Found 5 nearest neighbors for 'neural'
+2025-05-08 21:06:30,857 - embeddings - INFO - Reducing dimensions to 3D with TSNE
+2025-05-08 21:06:30,970 - api - INFO - Received embeddings request
+2025-05-08 21:06:31,001 - embeddings - INFO - Found 5 nearest neighbors for 'neural'
+2025-05-08 21:06:31,002 - embeddings - INFO - Reducing dimensions to 3D with TSNE
+2025-05-08 21:06:31,093 - embeddings - INFO - 3D dimensionality reduction complete with TSNE
+2025-05-08 21:06:31,094 - api - INFO - Returning embeddings, neighbors, and visualization data for 'neural' (method: tsne)
+2025-05-08 21:06:31,213 - embeddings - INFO - 3D dimensionality reduction complete with TSNE
+2025-05-08 21:06:31,213 - api - INFO - Returning embeddings, neighbors, and visualization data for 'neural' (method: tsne)
+2025-05-08 21:06:41,273 - api - INFO - Serving frontend
+2025-05-08 21:06:49,383 - api - INFO - Received embeddings request
+2025-05-08 21:06:49,420 - embeddings - INFO - Found 5 nearest neighbors for 'brown'
+2025-05-08 21:06:49,420 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:06:49,422 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:06:49,422 - api - ERROR - Error processing embeddings request: index 10 is out of bounds for axis 0 with size 10
+2025-05-08 21:06:53,637 - api - INFO - Received embeddings request
+2025-05-08 21:06:53,657 - embeddings - INFO - Found 5 nearest neighbors for 'brown'
+2025-05-08 21:06:53,658 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:06:53,659 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:06:53,660 - api - ERROR - Error processing embeddings request: index 10 is out of bounds for axis 0 with size 10
+2025-05-08 21:06:57,220 - api - INFO - Received embeddings request
+2025-05-08 21:06:57,248 - embeddings - INFO - Found 5 nearest neighbors for 'brown'
+2025-05-08 21:06:57,248 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:06:57,249 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:06:57,250 - api - ERROR - Error processing embeddings request: index 10 is out of bounds for axis 0 with size 10
+2025-05-08 21:07:06,994 - api - INFO - Received embeddings request
+2025-05-08 21:07:07,016 - embeddings - INFO - Found 5 nearest neighbors for 'brown'
+2025-05-08 21:07:07,017 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:07:07,018 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:07:07,019 - api - ERROR - Error processing embeddings request: index 10 is out of bounds for axis 0 with size 10
+2025-05-08 21:13:28,857 - api - INFO - Initializing API with sample corpus
+2025-05-08 21:13:28,858 - preprocess - INFO - Starting corpus preprocessing
+2025-05-08 21:13:28,865 - preprocess - INFO - Created vocabulary with 57 words
+2025-05-08 21:13:28,865 - embeddings - INFO - Initialized TF-IDF embeddings with vocab size 57
+2025-05-08 21:13:28,865 - embeddings - INFO - Computing TF-IDF vectors
+2025-05-08 21:13:28,870 - embeddings - INFO - Computed TF-IDF vectors for 10 documents
+2025-05-08 21:13:28,870 - visualize - INFO - Generating visualization data for PCA
+2025-05-08 21:13:28,870 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:13:28,873 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:13:28,873 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:13:28,875 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:13:28,881 - visualize - INFO - Visualization data saved as JSON for PCA
+2025-05-08 21:13:28,881 - visualize - INFO - Generating visualization data for TSNE
+2025-05-08 21:13:28,882 - embeddings - INFO - Reducing dimensions to 3D with TSNE
+2025-05-08 21:13:29,110 - embeddings - INFO - 3D dimensionality reduction complete with TSNE
+2025-05-08 21:13:29,110 - embeddings - INFO - Reducing dimensions to 3D with TSNE
+2025-05-08 21:13:29,299 - embeddings - INFO - 3D dimensionality reduction complete with TSNE
+2025-05-08 21:13:29,303 - visualize - INFO - Visualization data saved as JSON for TSNE
+2025-05-08 21:13:29,304 - api - INFO - Starting Flask server
+2025-05-08 21:21:48,496 - api - INFO - Initializing API with sample corpus
+2025-05-08 21:21:48,497 - preprocess - INFO - Starting corpus preprocessing
+2025-05-08 21:21:48,504 - preprocess - INFO - Created vocabulary with 57 words
+2025-05-08 21:21:48,504 - embeddings - INFO - Initialized TF-IDF embeddings with vocab size 57
+2025-05-08 21:21:48,504 - embeddings - INFO - Computing TF-IDF vectors
+2025-05-08 21:21:48,510 - embeddings - INFO - Computed TF-IDF vectors for 10 documents
+2025-05-08 21:21:48,510 - visualize - INFO - Generating visualization data for PCA
+2025-05-08 21:21:48,510 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:21:48,518 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:21:48,525 - visualize - INFO - Visualization data saved as JSON for PCA
+2025-05-08 21:21:48,526 - visualize - INFO - Generating visualization data for TSNE
+2025-05-08 21:21:48,526 - embeddings - INFO - Reducing dimensions to 3D with TSNE
+2025-05-08 21:21:48,736 - embeddings - INFO - 3D dimensionality reduction complete with TSNE
+2025-05-08 21:21:48,740 - visualize - INFO - Visualization data saved as JSON for TSNE
+2025-05-08 21:21:48,742 - api - INFO - Starting Flask server
+2025-05-08 21:21:50,882 - api - INFO - Initializing API with sample corpus
+2025-05-08 21:21:50,882 - preprocess - INFO - Starting corpus preprocessing
+2025-05-08 21:21:50,890 - preprocess - INFO - Created vocabulary with 57 words
+2025-05-08 21:21:50,891 - embeddings - INFO - Initialized TF-IDF embeddings with vocab size 57
+2025-05-08 21:21:50,891 - embeddings - INFO - Computing TF-IDF vectors
+2025-05-08 21:21:50,893 - embeddings - INFO - Computed TF-IDF vectors for 10 documents
+2025-05-08 21:21:50,893 - visualize - INFO - Generating visualization data for PCA
+2025-05-08 21:21:50,894 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:21:50,895 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:21:50,901 - visualize - INFO - Visualization data saved as JSON for PCA
+2025-05-08 21:21:50,901 - visualize - INFO - Generating visualization data for TSNE
+2025-05-08 21:21:50,901 - embeddings - INFO - Reducing dimensions to 3D with TSNE
+2025-05-08 21:21:51,105 - embeddings - INFO - 3D dimensionality reduction complete with TSNE
+2025-05-08 21:21:51,108 - visualize - INFO - Visualization data saved as JSON for TSNE
+2025-05-08 21:21:51,110 - api - INFO - Starting Flask server
+2025-05-08 21:21:59,148 - api - INFO - Serving frontend
+2025-05-08 21:22:07,303 - api - INFO - Received embeddings request
+2025-05-08 21:22:07,328 - embeddings - INFO - Found 5 nearest neighbors for 'neural'
+2025-05-08 21:22:07,329 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:22:07,330 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:22:07,330 - api - INFO - Returning embeddings, neighbors, and visualization data for 'neural' (method: pca)
+2025-05-08 21:22:09,969 - api - INFO - Received embeddings request
+2025-05-08 21:22:09,988 - embeddings - INFO - Found 5 nearest neighbors for 'neural'
+2025-05-08 21:22:09,989 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:22:09,991 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:22:09,991 - api - INFO - Returning embeddings, neighbors, and visualization data for 'neural' (method: pca)
+2025-05-08 21:22:21,446 - api - INFO - Serving frontend
+2025-05-08 21:22:29,228 - api - INFO - Received embeddings request
+2025-05-08 21:22:29,244 - embeddings - INFO - Found 5 nearest neighbors for 'neural'
+2025-05-08 21:22:29,245 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:22:29,246 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:22:29,246 - api - INFO - Returning embeddings, neighbors, and visualization data for 'neural' (method: pca)
+2025-05-08 21:22:31,267 - api - INFO - Received embeddings request
+2025-05-08 21:22:31,292 - embeddings - INFO - Found 5 nearest neighbors for 'neural'
+2025-05-08 21:22:31,292 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:22:31,293 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:22:31,293 - api - INFO - Returning embeddings, neighbors, and visualization data for 'neural' (method: pca)
+2025-05-08 21:23:00,206 - api - INFO - Serving frontend
+2025-05-08 21:23:10,311 - api - INFO - Received embeddings request
+2025-05-08 21:23:10,345 - embeddings - INFO - Found 5 nearest neighbors for 'cats'
+2025-05-08 21:23:10,346 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:23:10,350 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:23:10,351 - api - INFO - Returning embeddings, neighbors, and visualization data for 'cats' (method: pca)
+2025-05-08 21:23:11,715 - api - INFO - Received embeddings request
+2025-05-08 21:23:11,732 - embeddings - INFO - Found 5 nearest neighbors for 'cats'
+2025-05-08 21:23:11,732 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:23:11,733 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:23:11,733 - api - INFO - Returning embeddings, neighbors, and visualization data for 'cats' (method: pca)
+2025-05-08 21:29:14,466 - api - INFO - Initializing API with sample corpus
+2025-05-08 21:29:14,466 - preprocess - INFO - Starting corpus preprocessing
+2025-05-08 21:29:14,474 - preprocess - INFO - Created vocabulary with 57 words
+2025-05-08 21:29:14,474 - embeddings - INFO - Initialized TF-IDF embeddings with vocab size 57
+2025-05-08 21:29:14,475 - embeddings - INFO - Computing TF-IDF vectors
+2025-05-08 21:29:14,476 - embeddings - INFO - Computed TF-IDF vectors for 10 documents
+2025-05-08 21:29:14,477 - visualize - INFO - Generating visualization data for PCA
+2025-05-08 21:29:14,477 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:29:14,478 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:29:14,482 - visualize - INFO - Visualization data saved as JSON for PCA
+2025-05-08 21:29:14,482 - visualize - INFO - Generating visualization data for TSNE
+2025-05-08 21:29:14,482 - embeddings - INFO - Reducing dimensions to 3D with TSNE
+2025-05-08 21:29:14,697 - embeddings - INFO - 3D dimensionality reduction complete with TSNE
+2025-05-08 21:29:14,701 - visualize - INFO - Visualization data saved as JSON for TSNE
+2025-05-08 21:29:14,703 - api - INFO - Starting Flask server
+2025-05-08 21:29:16,825 - api - INFO - Initializing API with sample corpus
+2025-05-08 21:29:16,825 - preprocess - INFO - Starting corpus preprocessing
+2025-05-08 21:29:16,832 - preprocess - INFO - Created vocabulary with 57 words
+2025-05-08 21:29:16,833 - embeddings - INFO - Initialized TF-IDF embeddings with vocab size 57
+2025-05-08 21:29:16,833 - embeddings - INFO - Computing TF-IDF vectors
+2025-05-08 21:29:16,835 - embeddings - INFO - Computed TF-IDF vectors for 10 documents
+2025-05-08 21:29:16,835 - visualize - INFO - Generating visualization data for PCA
+2025-05-08 21:29:16,835 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:29:16,837 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:29:16,841 - visualize - INFO - Visualization data saved as JSON for PCA
+2025-05-08 21:29:16,842 - visualize - INFO - Generating visualization data for TSNE
+2025-05-08 21:29:16,842 - embeddings - INFO - Reducing dimensions to 3D with TSNE
+2025-05-08 21:29:17,074 - embeddings - INFO - 3D dimensionality reduction complete with TSNE
+2025-05-08 21:29:17,077 - visualize - INFO - Visualization data saved as JSON for TSNE
+2025-05-08 21:29:17,079 - api - INFO - Starting Flask server
+2025-05-08 21:29:25,291 - api - INFO - Serving frontend
+2025-05-08 21:29:33,383 - api - INFO - Received embeddings request
+2025-05-08 21:29:33,405 - embeddings - INFO - Found 5 nearest neighbors for 'neural'
+2025-05-08 21:29:33,406 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:29:33,407 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:29:33,407 - api - INFO - Returning embeddings, neighbors, and visualization data for 'neural' (method: pca)
+2025-05-08 21:29:35,307 - api - INFO - Received embeddings request
+2025-05-08 21:29:35,326 - embeddings - INFO - Found 5 nearest neighbors for 'neural'
+2025-05-08 21:29:35,326 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:29:35,327 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:29:35,328 - api - INFO - Returning embeddings, neighbors, and visualization data for 'neural' (method: pca)
+2025-05-08 21:30:09,604 - api - INFO - Received embeddings request
+2025-05-08 21:30:09,627 - embeddings - INFO - Found 5 nearest neighbors for 'neural'
+2025-05-08 21:30:09,627 - embeddings - INFO - Reducing dimensions to 3D with TSNE
+2025-05-08 21:30:09,834 - embeddings - INFO - 3D dimensionality reduction complete with TSNE
+2025-05-08 21:30:09,834 - api - INFO - Returning embeddings, neighbors, and visualization data for 'neural' (method: tsne)
+2025-05-08 21:32:30,904 - api - INFO - Received embeddings request
+2025-05-08 21:32:30,944 - embeddings - INFO - Found 5 nearest neighbors for 'neural'
+2025-05-08 21:32:30,945 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:32:30,947 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:32:30,948 - api - INFO - Returning embeddings, neighbors, and visualization data for 'neural' (method: pca)
+2025-05-08 21:32:33,828 - api - INFO - Received embeddings request
+2025-05-08 21:32:33,848 - embeddings - INFO - Found 5 nearest neighbors for 'neural'
+2025-05-08 21:32:33,848 - embeddings - INFO - Reducing dimensions to 3D with TSNE
+2025-05-08 21:32:34,142 - embeddings - INFO - 3D dimensionality reduction complete with TSNE
+2025-05-08 21:32:34,143 - api - INFO - Returning embeddings, neighbors, and visualization data for 'neural' (method: tsne)
+2025-05-08 21:32:42,153 - api - INFO - Received embeddings request
+2025-05-08 21:32:42,179 - embeddings - INFO - Found 5 nearest neighbors for 'neural'
+2025-05-08 21:32:42,180 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:32:42,181 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:32:42,181 - api - INFO - Returning embeddings, neighbors, and visualization data for 'neural' (method: pca)
+2025-05-08 21:32:52,590 - api - INFO - Received embeddings request
+2025-05-08 21:32:52,629 - embeddings - INFO - Found 5 nearest neighbors for 'neural'
+2025-05-08 21:32:52,630 - embeddings - INFO - Reducing dimensions to 3D with TSNE
+2025-05-08 21:32:52,917 - embeddings - INFO - 3D dimensionality reduction complete with TSNE
+2025-05-08 21:32:52,918 - api - INFO - Returning embeddings, neighbors, and visualization data for 'neural' (method: tsne)
+2025-05-08 21:33:09,671 - api - INFO - Received embeddings request
+2025-05-08 21:33:09,699 - embeddings - INFO - Found 5 nearest neighbors for 'neural'
+2025-05-08 21:33:09,699 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:33:09,703 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:33:09,704 - api - INFO - Returning embeddings, neighbors, and visualization data for 'neural' (method: pca)
+2025-05-08 21:34:04,033 - api - INFO - Received embeddings request
+2025-05-08 21:34:04,063 - embeddings - INFO - Found 5 nearest neighbors for 'the'
+2025-05-08 21:34:04,064 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:34:04,065 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:34:04,065 - api - INFO - Returning embeddings, neighbors, and visualization data for 'the' (method: pca)
+2025-05-08 21:34:06,847 - api - INFO - Received embeddings request
+2025-05-08 21:34:06,877 - embeddings - INFO - Found 5 nearest neighbors for 'the'
+2025-05-08 21:34:06,878 - embeddings - INFO - Reducing dimensions to 3D with PCA
+2025-05-08 21:34:06,879 - embeddings - INFO - 3D dimensionality reduction complete with PCA
+2025-05-08 21:34:06,879 - api - INFO - Returning embeddings, neighbors, and visualization data for 'the' (method: pca)
+2025-05-08 21:34:48,392 - api - INFO - Received embeddings request
+2025-05-08 21:34:48,413 - embeddings - INFO - Found 5 nearest neighbors for 'the'
+2025-05-08 21:34:48,413 - embeddings - INFO - Reducing dimensions to 3D with TSNE
+2025-05-08 21:34:48,650 - embeddings - INFO - 3D dimensionality reduction complete with TSNE
+2025-05-08 21:34:48,650 - api - INFO - Returning embeddings, neighbors, and visualization data for 'the' (method: tsne)

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Embeddings Explorer</title>
+    <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.20.6/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+
+        class ErrorBoundary extends React.Component {
+            state = { error: null };
+            static getDerivedStateFromError(error) {
+                return { error: error.message };
+            }
+            render() {
+                if (this.state.error) {
+                    return (
+                        <div className="text-red-500 p-4">
+                            Error: {this.state.error}. Please try again or check the console for details.
+                        </div>
+                    );
+                }
+                return this.props.children;
+            }
+        }
+
+        function WordInputPage({ onWordSelected }) {
+            const [word, setWord] = useState('');
+            const [embedding, setEmbedding] = useState(null);
+            const [error, setError] = useState('');
+
+            const handleSubmit = async (e) => {
+                e.preventDefault();
+                console.log(`Submitting word: ${word}`);
+                setError('');
+                setEmbedding(null);
+
+                const trimmedWord = word.trim();
+                if (trimmedWord.split(/\s+/).length > 1) {
+                    console.error('Invalid input: Phrase detected');
+                    setError("Please enter a single word (e.g., 'neural', 'machine'). Phrases are not supported.");
+                    return;
+                }
+
+                try {
+                    const response = await fetch('http://localhost:5000/embeddings', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ word: trimmedWord, method: 'pca' })
+                    });
+                    
+                    const data = await response.json();
+                    if (response.ok) {
+                        console.log(`Received embedding for: ${trimmedWord}`, data);
+                        setEmbedding(data);
+                    } else {
+                        console.error(`Error: ${data.error}`);
+                        setError(data.error || 'Failed to fetch embedding');
+                    }
+                } catch (err) {
+                    console.error(`Fetch error: ${err.message}`);
+                    setError(`Failed to connect to server: ${err.message}. Ensure the Flask server is running at http://localhost:5000.`);
+                }
+            };
+
+            return (
+                <div className="max-w-4xl mx-auto p-4">
+                    <h1 className="text-2xl font-bold mb-4">Word Embeddings Explorer</h1>
+                    <div className="mb-4 flex space-x-4">
+                        <input
+                            type="text"
+                            value={word}
+                            onChange={(e) => {
+                                console.log(`Input changed: ${e.target.value}`);
+                                setWord(e.target.value);
+                            }}
+                            placeholder="Enter a single word (e.g., neural)"
+                            className="flex-1 p-2 border rounded"
+                        />
+                        <button
+                            onClick={handleSubmit}
+                            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                        >
+                            Get Embedding
+                        </button>
+                    </div>
+                    
+                    {error && (
+                        <div className="text-red-500 mb-4">{error}</div>
+                    )}
+                    
+                    {embedding && (
+                        <div className="mt-4">
+                            <h2 className="text-xl font-semibold">Embedding for: {embedding.word}</h2>
+                            <div className="mt-2">
+                                <h3 className="font-medium">TF-IDF Embedding:</h3>
+                                <pre className="bg-gray-100 p-2 rounded overflow-auto max-h-48">
+                                    {JSON.stringify(embedding.embedding, null, 2)}
+                                </pre>
+                            </div>
+                            <button
+                                onClick={() => onWordSelected(embedding.word)}
+                                className="mt-4 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+                            >
+                                Visualize
+                            </button>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        function VisualizationPage({ word, onBack }) {
+            const [method, setMethod] = useState('pca');
+            const [result, setResult] = useState(null);
+            const [error, setError] = useState('');
+            const [activeTab, setActiveTab] = useState('scatter_3d');
+            const plotRefs = useRef({
+                scatter_3d: null,
+                scatter_2d: null,
+                heatmap: null,
+                bar: null
+            });
+
+            const fetchVisualization = async () => {
+                console.log(`Fetching visualization for: ${word}, method: ${method}`);
+                setError('');
+                setResult(null);
+
+                try {
+                    const response = await fetch('http://localhost:5000/embeddings', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ word, method })
+                    });
+                    
+                    const data = await response.json();
+                    if (response.ok) {
+                        console.log(`Received visualization data for: ${word} (${method})`, data);
+                        setResult(data);
+                    } else {
+                        console.error(`Error: ${data.error}`);
+                        setError(data.error || 'Failed to fetch visualization');
+                    }
+                } catch (err) {
+                    console.error(`Fetch error: ${err.message}`);
+                    setError(`Failed to connect to server: ${err.message}. Ensure the Flask server is running at http://localhost:5000.`);
+                }
+            };
+
+            const renderPlot = (plotData, divId, highlightWord = null, highlightCoords = null) => {
+                if (!plotData || !window.Plotly || !plotRefs.current[divId]) {
+                    console.warn(`Skipping plot for ${divId}:`, { plotDataExists: !!plotData, plotlyExists: !!window.Plotly, divExists: !!plotRefs.current[divId] });
+                    return;
+                }
+                try {
+                    let data = [...plotData.data];
+                    if (highlightWord && highlightCoords && divId === 'scatter_3d' && highlightCoords.length === 3) {
+                        data.push({
+                            type: 'scatter3d',
+                            x: [highlightCoords[0]],
+                            y: [highlightCoords[1]],
+                            z: [highlightCoords[2]],
+                            mode: 'markers+text',
+                            text: [highlightWord],
+                            marker: { size: 8, color: 'red' },
+                            textposition: 'top center'
+                        });
+                    } else if (highlightWord && highlightCoords && divId === 'scatter_2d' && highlightCoords.length >= 2) {
+                        data.push({
+                            type: 'scatter',
+                            x: [highlightCoords[0]],
+                            y: [highlightCoords[1]],
+                            mode: 'markers+text',
+                            text: [highlightWord],
+                            marker: { size: 12, color: 'red' },
+                            textposition: 'top center'
+                        });
+                    }
+                    Plotly.newPlot(plotRefs.current[divId], data, plotData.layout);
+                    console.log(`Rendered plot in ${divId}`);
+                } catch (err) {
+                    console.error(`Plotly error in ${divId}:`, err);
+                    setError(`Failed to render ${divId} visualization: ${err.message}`);
+                }
+            };
+
+            useEffect(() => {
+                fetchVisualization();
+            }, [method]);
+
+            useEffect(() => {
+                if (result && result.visualization_data) {
+                    console.log('Visualization data:', result.visualization_data);
+                    renderPlot(result.visualization_data.scatter_3d, 'scatter_3d', result.word, result['3d_coords']);
+                    renderPlot(result.visualization_data.scatter_2d, 'scatter_2d', result.word, result['2d_coords']);
+                    renderPlot(result.visualization_data.heatmap, 'heatmap');
+                    renderPlot(result.visualization_data.bar, 'bar');
+                }
+            }, [result, activeTab]);
+
+            return (
+                <ErrorBoundary>
+                    <div className="max-w-6xl mx-auto p-4">
+                        <h1 className="text-2xl font-bold mb-4">Visualizations for: {word}</h1>
+                        <div className="mb-4 flex space-x-4">
+                            <select
+                                value={method}
+                                onChange={(e) => {
+                                    console.log(`Method changed: ${e.target.value}`);
+                                    setMethod(e.target.value);
+                                }}
+                                className="p-2 border rounded"
+                            >
+                                <option value="pca">PCA</option>
+                                <option value="tsne">t-SNE</option>
+                            </select>
+                            <button
+                                onClick={onBack}
+                                className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
+                            >
+                                Back to Word Input
+                            </button>
+                        </div>
+                        
+                        {error && (
+                            <div className="text-red-500 mb-4">{error}</div>
+                        )}
+                        
+                        <div className="mb-4">
+                            <button
+                                onClick={() => setActiveTab('scatter_3d')}
+                                className={`px-4 py-2 mr-2 rounded ${activeTab === 'scatter_3d' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+                            >
+                                3D Scatter
+                            </button>
+                            <button
+                                onClick={() => setActiveTab('scatter_2d')}
+                                className={`px-4 py-2 mr-2 rounded ${activeTab === 'scatter_2d' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+                            >
+                                2D Scatter
+                            </button>
+                            <button
+                                onClick={() => setActiveTab('heatmap')}
+                                className={`px-4 py-2 mr-2 rounded ${activeTab === 'heatmap' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+                            >
+                                Heatmap
+                            </button>
+                            <button
+                                onClick={() => setActiveTab('bar')}
+                                className={`px-4 py-2 rounded ${activeTab === 'bar' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+                            >
+                                Neighbor Similarity
+                            </button>
+                        </div>
+                        
+                        <div className="w-full h-[500px]">
+                            {activeTab === 'scatter_3d' && (
+                                <div ref={(el) => (plotRefs.current.scatter_3d = el)} id="scatter_3d" className="w-full h-full"></div>
+                            )}
+                            {activeTab === 'scatter_2d' && (
+                                <div ref={(el) => (plotRefs.current.scatter_2d = el)} id="scatter_2d" className="w-full h-full"></div>
+                            )}
+                            {activeTab === 'heatmap' && (
+                                <div ref={(el) => (plotRefs.current.heatmap = el)} id="heatmap" className="w-full h-full"></div>
+                            )}
+                            {activeTab === 'bar' && (
+                                <div ref={(el) => (plotRefs.current.bar = el)} id="bar" className="w-full h-full"></div>
+                            )}
+                        </div>
+                        
+                        {result && (
+                            <div className="mt-4">
+                                <h2 className="text-xl font-semibold">
+                                    Results for: {result.word} ({result.method.toUpperCase()})
+                                </h2>
+                                <div className="mt-2">
+                                    <h3 className="font-medium">TF-IDF Embedding:</h3>
+                                    <pre className="bg-gray-100 p-2 rounded overflow-auto max-h-48">
+                                        {JSON.stringify(result.embedding, null, 2)}
+                                    </pre>
+                                </div>
+                                <div className="mt-2">
+                                    <h3 className="font-medium">3D Coordinates ({result.method.toUpperCase()}):</h3>
+                                    <pre className="bg-gray-100 p-2 rounded">
+                                        {JSON.stringify(result['3d_coords'], null, 2)}
+                                    </pre>
+                                </div>
+                                <div className="mt-2">
+                                    <h3 className="font-medium">2D Coordinates ({result.method.toUpperCase()}):</h3>
+                                    <pre className="bg-gray-100 p-2 rounded">
+                                        {JSON.stringify(result['2d_coords'], null, 2)}
+                                    </pre>
+                                </div>
+                                <div className="mt-2">
+                                    <h3 className="font-medium">Nearest Neighbors:</h3>
+                                    <ul className="list-disc pl-5">
+                                        {result.nearest_neighbors.map(([neighbor, score]) => (
+                                            <li key={neighbor}>
+                                                {neighbor}: {score.toFixed(4)}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </ErrorBoundary>
+            );
+        }
+
+        function App() {
+            const [selectedWord, setSelectedWord] = useState(null);
+
+            return (
+                selectedWord ? (
+                    <VisualizationPage
+                        word={selectedWord}
+                        onBack={() => setSelectedWord(null)}
+                    />
+                ) : (
+                    <WordInputPage
+                        onWordSelected={(word) => setSelectedWord(word)}
+                    />
+                )
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+        console.log('App initialized');
+    </script>
+</body>
+</html>
